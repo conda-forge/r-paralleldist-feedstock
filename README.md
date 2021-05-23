@@ -3,7 +3,7 @@ About r-paralleldist
 
 Home: https://github.com/alexeckert/parallelDist, https://www.alexandereckert.com/R
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paralleldist-feedstock/blob/master/LICENSE.txt)
 
