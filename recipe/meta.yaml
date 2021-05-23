@@ -50,7 +50,7 @@ test:
 
 about:
   home: https://github.com/alexeckert/parallelDist, https://www.alexandereckert.com/R
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: A fast parallelized alternative to R's native 'dist' function to calculate distance
     matrices for continuous, binary, and multi-dimensional input matrices, which supports
     a broad variety of 41 predefined distance functions from the 'stats', 'proxy' and
@@ -66,14 +66,13 @@ about:
     different DTW step patterns and normalization methods.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
     - conda-forge/r
     - alexeckert
     - zdk123
-    
 
 # Package: parallelDist
 # Type: Package
