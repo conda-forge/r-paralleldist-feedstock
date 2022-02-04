@@ -1,4 +1,4 @@
-{% set version = '0.2.4' %}
+{% set version = "0.2.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parallelDist_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parallelDist/parallelDist_{{ version }}.tar.gz
-  sha256: 7bb2a4b09b19b9000814612cf4b0163e4a14293c5b069264a76e5198e24e0e3f
+  sha256: 30c6b3b85cf78c04a7dcd17ea7ed64356971f6ce48d15794078a18c53b249e06
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,19 +51,10 @@ test:
 about:
   home: https://github.com/alexeckert/parallelDist, https://www.alexandereckert.com/R
   license: GPL-2.0-or-later
-  summary: A fast parallelized alternative to R's native 'dist' function to calculate distance
-    matrices for continuous, binary, and multi-dimensional input matrices, which supports
-    a broad variety of 41 predefined distance functions from the 'stats', 'proxy' and
-    'dtw' R packages, as well as user- defined functions written in C++. For ease of
-    use, the 'parDist' function extends the signature of the 'dist' function and uses
-    the same parameter naming conventions as distance methods of existing R packages.
-    The package is mainly implemented in C++ and leverages the 'RcppParallel' package
-    to parallelize the distance computations with the help of the 'TinyThread' library.
-    Furthermore, the 'Armadillo' linear algebra library is used for optimized matrix
-    operations during distance calculations. The curiously recurring template pattern
-    (CRTP) technique is applied to avoid virtual functions, which improves the Dynamic
-    Time Warping calculations while the implementation stays flexible enough to support
-    different DTW step patterns and normalization methods.
+  summary: A fast parallelized alternative to R's native 'dist' function to calculate distance matrices for continuous, binary, and multi-dimensional input matrices, which supports a broad variety of 41 predefined distance functions from the 'stats', 'proxy' and 'dtw' R packages, as well as user- defined functions written
+    in C++. For ease of use, the 'parDist' function extends the signature of the 'dist' function and uses the same parameter naming conventions as distance methods of existing R packages. The package is mainly implemented in C++ and leverages the 'RcppParallel' package to parallelize the distance computations with the help
+    of the 'TinyThread' library. Furthermore, the 'Armadillo' linear algebra library is used for optimized matrix operations during distance calculations. The curiously recurring template pattern (CRTP) technique is applied to avoid virtual functions, which improves the Dynamic Time Warping calculations while the implementation
+    stays flexible enough to support different DTW step patterns and normalization methods.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
