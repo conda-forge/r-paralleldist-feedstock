@@ -3,6 +3,7 @@ About r-paralleldist-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paralleldist-feedstock/blob/main/LICENSE.txt)
 
+
 About r-paralleldist
 --------------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/alexeckert/parallelDist, https://www.alexandereckert.co
 Package license: GPL-2.0-or-later
 
 Summary: A fast parallelized alternative to R's native 'dist' function to calculate distance matrices for continuous, binary, and multi-dimensional input matrices, which supports a broad variety of 41 predefined distance functions from the 'stats', 'proxy' and 'dtw' R packages, as well as user- defined functions written in C++. For ease of use, the 'parDist' function extends the signature of the 'dist' function and uses the same parameter naming conventions as distance methods of existing R packages. The package is mainly implemented in C++ and leverages the 'RcppParallel' package to parallelize the distance computations with the help of the 'TinyThread' library. Furthermore, the 'Armadillo' linear algebra library is used for optimized matrix operations during distance calculations. The curiously recurring template pattern (CRTP) technique is applied to avoid virtual functions, which improves the Dynamic Time Warping calculations while the implementation stays flexible enough to support different DTW step patterns and normalization methods.
+
 About r-paralleldist
 --------------------
 
@@ -24,7 +26,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://app.travis-ci.com/conda-forge/r-paralleldist-feedstock">
+        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/r-paralleldist-feedstock/main.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -49,6 +58,34 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_r_base4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_r_base4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
