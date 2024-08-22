@@ -1,6 +1,5 @@
 {% set version = "0.2.6" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-paralleldist
@@ -13,8 +12,7 @@ source:
   sha256: 30c6b3b85cf78c04a7dcd17ea7ed64356971f6ce48d15794078a18c53b249e06
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -37,7 +37,6 @@ requirements:
     - r-rcppparallel >=4.3.20
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.12.6
     - r-rcpparmadillo
     - r-rcppparallel >=4.3.20
