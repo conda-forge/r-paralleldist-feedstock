@@ -7,33 +7,30 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paralleldist-
 About r-paralleldist
 --------------------
 
-Home: https://github.com/alexeckert/parallelDist, https://www.alexandereckert.com/R
+Home: https://www.alexandereckert.com/R
 
 Package license: GPL-2.0-or-later
 
 Summary: A fast parallelized alternative to R's native 'dist' function to calculate distance matrices for continuous, binary, and multi-dimensional input matrices, which supports a broad variety of 41 predefined distance functions from the 'stats', 'proxy' and 'dtw' R packages, as well as user- defined functions written in C++. For ease of use, the 'parDist' function extends the signature of the 'dist' function and uses the same parameter naming conventions as distance methods of existing R packages. The package is mainly implemented in C++ and leverages the 'RcppParallel' package to parallelize the distance computations with the help of the 'TinyThread' library. Furthermore, the 'Armadillo' linear algebra library is used for optimized matrix operations during distance calculations. The curiously recurring template pattern (CRTP) technique is applied to avoid virtual functions, which improves the Dynamic Time Warping calculations while the implementation stays flexible enough to support different DTW step patterns and normalization methods.
+
+Development: https://github.com/alexeckert/parallelDist
 
 About r-paralleldist
 --------------------
 
-Home: https://github.com/alexeckert/parallelDist, https://www.alexandereckert.com/R
+Home: https://www.alexandereckert.com/R
 
 Package license: GPL-2.0-or-later
 
 Summary: A fast parallelized alternative to R's native 'dist' function to calculate distance matrices for continuous, binary, and multi-dimensional input matrices, which supports a broad variety of 41 predefined distance functions from the 'stats', 'proxy' and 'dtw' R packages, as well as user- defined functions written in C++. For ease of use, the 'parDist' function extends the signature of the 'dist' function and uses the same parameter naming conventions as distance methods of existing R packages. The package is mainly implemented in C++ and leverages the 'RcppParallel' package to parallelize the distance computations with the help of the 'TinyThread' library. Furthermore, the 'Armadillo' linear algebra library is used for optimized matrix operations during distance calculations. The curiously recurring template pattern (CRTP) technique is applied to avoid virtual functions, which improves the Dynamic Time Warping calculations while the implementation stays flexible enough to support different DTW step patterns and normalization methods.
+
+Development: https://github.com/alexeckert/parallelDist
 
 Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/r-paralleldist-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/r-paralleldist-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -47,13 +44,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_r_base4.2</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.2" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
@@ -61,10 +51,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_r_base4.2</td>
+              <td>linux_64_r_base4.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.2" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.4" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -75,10 +65,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_r_base4.2</td>
+              <td>linux_aarch64_r_base4.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.2" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.4" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -89,10 +79,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_r_base4.2</td>
+              <td>linux_ppc64le_r_base4.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.2" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.4" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -103,10 +93,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64</td>
+              <td>osx_64_r_base4.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=win&configuration=win%20win_64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8969&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-paralleldist-feedstock?branchName=main&jobName=win&configuration=win%20win_64_r_base4.4" alt="variant">
                 </a>
               </td>
             </tr>
@@ -190,7 +194,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -239,6 +243,6 @@ Feedstock Maintainers
 =====================
 
 * [@alexeckert](https://github.com/alexeckert/)
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 * [@zdk123](https://github.com/zdk123/)
 
