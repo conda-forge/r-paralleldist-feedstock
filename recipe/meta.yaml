@@ -1,4 +1,4 @@
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parallelDist_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parallelDist/parallelDist_{{ version }}.tar.gz
-  sha256: 30c6b3b85cf78c04a7dcd17ea7ed64356971f6ce48d15794078a18c53b249e06
+  sha256: b38bb8f4bbad025686a1b8d9fde4aa439f8012d39aab1048adc95ae27485196f
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
